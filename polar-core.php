@@ -11,3 +11,12 @@
  * Text Domain:       polar-core
  * Domain Path:       /languages
  */
+
+ // if file direct access abort
+
+
+ if ( ! defined('WPINC' )) {
+    die;
+ }
+
+
