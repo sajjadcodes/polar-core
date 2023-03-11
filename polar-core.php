@@ -27,14 +27,16 @@ function pbc_activate () {
 
 function pbc_deactivate () {
     require_once plugin_dir_path(__FILE__) . 'includes/class-polar-core-deactivator.php';
+    Polar_Core_Deactivator::deactivate();
+
 }
 
 
 register_activation_hook( __FILE__, 'pbc_deactivate' );
-register_deactivation_hook( __FILE__, 'deactivate_polar_core' );
+register_deactivation_hook( __FILE__, 'pbc_deactivate' );
 
 
 function pbc_run() {
-    
+
 }
 
