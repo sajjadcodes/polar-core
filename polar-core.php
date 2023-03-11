@@ -20,3 +20,21 @@
  }
 
 
+function pbc_activate () {
+    require_once plugin_dir_path(__FILE__) . 'includes/class-polar-core-activator.php'; 
+    Polar_Core_Activator::activate();
+}
+
+function pbc_deactivate () {
+    require_once plugin_dir_path(__FILE__) . 'includes/class-polar-core-deactivator.php';
+}
+
+
+register_activation_hook( __FILE__, 'pbc_deactivate' );
+register_deactivation_hook( __FILE__, 'deactivate_polar_core' );
+
+
+function pbc_run() {
+    
+}
+
